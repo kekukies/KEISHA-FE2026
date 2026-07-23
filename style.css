@@ -5,7 +5,7 @@ box-sizing: border-box;
 }
 
 :root{
-    --bg: #0d1b3a;
+    --bg: #0d1b2a;
     --bg-elevated: #13263b;
     --font-mono:"JetBrains Mono",monospace;
     --font-sans:"Inter", sans-serif;
@@ -28,7 +28,7 @@ body {
     font-family: var(--font-sans);
     background-color: var(--bg);
     color: var(--text);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .eyebrow{
@@ -38,16 +38,19 @@ body {
     margin-bottom:8px; 
 }
 
-
-
 section {
-    padding: 80px;
-    max-width: 110px;
+    padding: 80px 40px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 h1, h2, h3, .logo {
     font-family: var(--font-mono);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .navbar {
@@ -64,7 +67,7 @@ h1, h2, h3, .logo {
 
 .logo{
     font-weight: 700;
-    font-size: 10px;
+    font-size: 18px;
 }
 
 .nav-list {
@@ -89,7 +92,108 @@ h1, h2, h3, .logo {
     background: none;
     color: var(--text);
     padding: 8px 12px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
 }
 
+/*Hero Section Styles*/
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-top: 100px;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/*Hero Text Styles*/
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h1{
+    font-size: 40px;
+    margin: 4px 0 16px;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.subtittle {
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    max-width: 420px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #0d1b2a;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover{
+    transform: translateY(-2px);
+}
+
+/*Section Skill*/
+
+.skill-grid {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.skill-tag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    background: rgba(100,255,218,0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.skill-card h3{
+    margin: 16px 0 8px;
+    font-size: 18px;
+}
+
+.skill-card p{
+    color: var(--text-muted);
+    font-size: 14px;
+}
